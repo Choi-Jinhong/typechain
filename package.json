@@ -1,8 +1,12 @@
 {
-  "name": "typechain",
-  "version": "1.0.0",
-  "main": "index.js",
-  "repository": "https://github.com/Choi-Jinhong/typechain.git",
-  "author": "Gnong <jinhongdev@gmail.com>",
-  "license": "MIT"
+    "name": "typechain",
+    "version": "1.0.0",
+    "main": "index.js",
+    "repository": "https://github.com/Choi-Jinhong/typechain.git",
+    "author": "Gnong <jinhongdev@gmail.com>",
+    "license": "MIT",
+    "scripts": {
+        "start": "node index.js",
+        "prestart": "tsc"
+    }
 }
