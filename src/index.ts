@@ -1,20 +1,26 @@
-class Human { // interface, class는 비슷한 기능을 하지만 상황에 따라서 사용하게 됨 (class: react와 같은 클래스가 필요할 때 사용, interface 대부분 사용)
-    public name: string; //public , private이 있음
-    public age: number;
-    public gender: string;
-    constructor(name:string, age:number, gender?:string) { // ?도 사용가능
-        this.name = name;
-        this.age = age;
-        this.gender = gender;
+class Block {
+    public index: number;
+    public hash: string;
+    public previousHash: string;
+    public data: string;
+    public timestamp: number;
+    constructor(index: number,
+        hash: string,
+        previousHash: string,
+        data: string,
+        timestamp: number,
+    ) {
+        this.index = index;
+        this.hash = hash;
+        this.previousHash = previousHash;
+        this.data = data;
+        this.timestamp = timestamp;
     }
 }
 
-const lynn = new Human("Lynn", 18, "famale");
+const genesisBlock:Block = new Block(0, "221009f0shfoiadf", "", "Hello", 123456);
 
-const sayHi = (person: Human): string => {
-    return `Hello ${person.name}, you are ${person.age}. you are a ${person.gender}`;
-};
+let blockchain: [Block] = [genesisBlock];
 
-console.log(sayHi(lynn));
-
-export {};
+console.log(blockchain);
+export { };
